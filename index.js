@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 import cors from "cors";
 import bodyParser from "body-parser";
 import dotenv from "dotenv";
+import * as path from 'path';
 import patientsRoutes from "./routes/patients.js";
 
 const app = express();
