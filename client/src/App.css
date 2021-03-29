@@ -1,0 +1,19 @@
+a {
+  text-decoration: none;
+}
+
+.MuiDataGrid-cellLeft,
+.MuiDataGrid-cellRight {
+  font-weight: bold;
+}
+
+
+.MuiDataGrid-root,
+.MuiDataGrid-row,
+.MuiDataGrid-window {
+  box-shadow: 0 1px 20px 0px #e4e4e4;
+}
+
+.MuiDataGrid-root .MuiDataGrid-columnsContainer {
+  box-shadow: 0 1px 20px 0px #e4e4e4;
+}
