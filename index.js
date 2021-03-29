@@ -3,8 +3,9 @@ import mongoose from "mongoose";
 import cors from "cors";
 import bodyParser from "body-parser";
 import dotenv from "dotenv";
-import * as path from 'path';
+import path from 'path';
 import patientsRoutes from "./routes/patients.js";
+
 
 const app = express();
 dotenv.config();
@@ -14,12 +15,18 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
-// console.log("dir",__dirname)
+// app.use(express.static("build"));
+// app.get("*", (req, res) => {
+//   res.sendFile(path.resolve("client", "build", "index.html"));
+// });
+
+app.use(express.static(path.join(path.resolve(), 'client/build')));
 
 app.use("/patients", patientsRoutes);
-app.use(express.static("build"));
-app.get("*", (req, res) => {
-  res.sendFile(path.resolve("client", "build", "index.html"));
+
+// Handles any requests that don't match the ones above
+app.get('*', (req,res) =>{
+  res.sendFile(path.join(path.resolve()+'/client/build/index.html'));
 });
 
 // const CONNECTION_URL = "mongodb://localhost/clinic";
