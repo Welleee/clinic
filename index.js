@@ -14,10 +14,12 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
+// console.log("dir",__dirname)
+
 app.use("/patients", patientsRoutes);
 app.use(express.static("build"));
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "build", "index.html"));
+  res.sendFile(path.resolve("client", "build", "index.html"));
 });
 
 // const CONNECTION_URL = "mongodb://localhost/clinic";
