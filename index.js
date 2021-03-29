@@ -17,7 +17,7 @@ app.use(cors());
 app.use("/patients", patientsRoutes);
 app.use(express.static("build"));
 app.get("*", (req, res) => {
-  res.sendFile(path.resolve(path.dirname(''), "build", "index.html"));
+  res.sendFile(path.join(__dirname, "build", "index.html"));
 });
 
 // const CONNECTION_URL = "mongodb://localhost/clinic";
