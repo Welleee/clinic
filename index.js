@@ -15,11 +15,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
-// app.use(express.static("build"));
-// app.get("*", (req, res) => {
-//   res.sendFile(path.resolve("client", "build", "index.html"));
-// });
-
 app.use(express.static(path.join(path.resolve(), 'client/build')));
 
 app.use("/patients", patientsRoutes);

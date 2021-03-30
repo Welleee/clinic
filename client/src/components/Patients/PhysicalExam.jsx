@@ -17,6 +17,7 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: "20px",
   },
 }));
+
 const PhysicalExam = ({ register, handleChangeAccordion, expanded }) => {
   const classes = useStyles();
 
@@ -35,7 +36,7 @@ const PhysicalExam = ({ register, handleChangeAccordion, expanded }) => {
           </AccordionSummary>
           {/* <AccordionDetails> */}
           <Grid container spacing={1}>
-            <Grid item lg={3} sm={12} md={3}>
+            <Grid item lg={3} xs={12} md={3}>
               <TextField
                 name="physicalExam.weight"
                 label="Peso"
@@ -46,7 +47,7 @@ const PhysicalExam = ({ register, handleChangeAccordion, expanded }) => {
               />
             </Grid>
 
-            <Grid item lg={3} sm={12} md={3}>
+            <Grid item lg={3} xs={12} md={3}>
               <TextField
                 name="physicalExam.size"
                 label="Talla"
@@ -57,7 +58,7 @@ const PhysicalExam = ({ register, handleChangeAccordion, expanded }) => {
               />
             </Grid>
 
-            <Grid item lg={3} sm={12} md={3}>
+            <Grid item lg={3} xs={12} md={3}>
               <TextField
                 name="physicalExam.imc"
                 label="IMC"
@@ -67,7 +68,7 @@ const PhysicalExam = ({ register, handleChangeAccordion, expanded }) => {
                 InputLabelProps={{ shrink: true }}  
               />
             </Grid>
-            <Grid item lg={3} sm={12} md={3}>
+            <Grid item lg={3} xs={12} md={3}>
               <TextField
                 name="physicalExam.tv"
                 label="TV"
@@ -78,7 +79,7 @@ const PhysicalExam = ({ register, handleChangeAccordion, expanded }) => {
               />
             </Grid>
 
-            <Grid item lg={4} sm={12} md={4}>
+            <Grid item lg={4} xs={12} md={4}>
               <TextField
                 name="physicalExam.especuloscopia"
                 label="Especuloscopía"
@@ -90,7 +91,7 @@ const PhysicalExam = ({ register, handleChangeAccordion, expanded }) => {
             </Grid>
             
 
-            <Grid item lg={4} sm={12} md={4}>
+            <Grid item lg={4} xs={12} md={4}>
               <TextField
                 name="physicalExam.colposcopia"
                 label="Colposcopía"
@@ -102,7 +103,7 @@ const PhysicalExam = ({ register, handleChangeAccordion, expanded }) => {
             </Grid>
 
 
-            <Grid item lg={4} sm={12} md={4}>
+            <Grid item lg={4} xs={12} md={4}>
               <TextField
                 name="physicalExam.examenMamario"
                 label="Examen Mamario"
@@ -113,7 +114,7 @@ const PhysicalExam = ({ register, handleChangeAccordion, expanded }) => {
               />
             </Grid>
 
-            <Grid item lg={12} sm={12} md={12}>
+            <Grid item lg={12} xs={12} md={12}>
               <TextField
                 name="physicalExam.observaciones"
                 label="Observaciones"

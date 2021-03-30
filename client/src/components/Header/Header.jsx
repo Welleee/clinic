@@ -4,7 +4,7 @@ import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -16,15 +16,24 @@ const useStyles = makeStyles((theme) => ({
   title: {
     flexGrow: 1,
     "& a": {
-      color: 'white'
-    }
+      color: "white",
+    },
   },
   buttonMenu: {
-    '& span': {
-      color: 'white'
-    }
-    
-  }
+    "& span": {
+      color: "white",
+    },
+  },
+
+  navLink: {
+    color: "white",
+    textTransform: "uppercase",
+    marginRight: "15px",
+  },
+
+  active: {
+    color: "#bfbfbf",
+  },
 }));
 
 const Header = () => {
@@ -44,12 +53,28 @@ const Header = () => {
         <Typography variant="h6" className={classes.title}>
           <Link to="/">Historias Clinicas</Link>
         </Typography>
-        <Link to="/">
-          <Button className={classes.buttonMenu}>Pacientes</Button>
-        </Link>
-        <Link to="/alta-paciente">
-          <Button className={classes.buttonMenu}>Agregar Paciente</Button>
-        </Link>
+        <Typography variant="body1">
+          <NavLink
+            to="/"
+            exact
+            className={classes.navLink}
+            activeClassName={classes.active}
+          >
+            {/* <Button className={classes.buttonMenu}>Pacientes</Button> */}
+            Pacientes
+          </NavLink>
+        </Typography>
+
+        <Typography variant="body1">
+          <NavLink
+            to="/alta-paciente"
+            className={classes.navLink}
+            activeClassName={classes.active}
+          >
+            {/* <Button className={classes.buttonMenu}>Agregar Paciente</Button> */}
+            Agregar Paciente
+          </NavLink>
+        </Typography>
       </Toolbar>
     </AppBar>
   );

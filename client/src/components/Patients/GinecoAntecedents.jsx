@@ -40,7 +40,7 @@ const GinecoAntecedents = ({ expanded, handleChangeAccordion, register }) => {
           </AccordionSummary>
           {/* <AccordionDetails> */}
           <Grid container spacing={1}>
-            <Grid item lg={3} md={3} sm={12}>
+            <Grid item lg={3} md={4} xs={12}>
               <TextField
                 name="ginecoAntecedents.menarca"
                 label="Menarca"
@@ -51,7 +51,7 @@ const GinecoAntecedents = ({ expanded, handleChangeAccordion, register }) => {
               />
             </Grid>
 
-            <Grid item lg={3} md={3} sm={12}>
+            <Grid item lg={3} md={4} xs={12}>
               <TextField
                 name="ginecoAntecedents.ritmoMenstrual"
                 label="Ritmo menstrual"
@@ -62,7 +62,7 @@ const GinecoAntecedents = ({ expanded, handleChangeAccordion, register }) => {
               />
             </Grid>
 
-            <Grid item lg={3} md={3} sm={12}>
+            <Grid item lg={3} md={4} xs={12}>
               <TextField
                 name="ginecoAntecedents.fum"
                 label="FUM"
@@ -73,7 +73,7 @@ const GinecoAntecedents = ({ expanded, handleChangeAccordion, register }) => {
               />
             </Grid>
 
-            <Grid item lg={3} md={3} sm={12}>
+            <Grid item lg={3} md={4} xs={12}>
               <TextField
                 name="ginecoAntecedents.mac"
                 label="MAC"
@@ -84,7 +84,7 @@ const GinecoAntecedents = ({ expanded, handleChangeAccordion, register }) => {
               />
             </Grid>
 
-            <Grid item lg={3} md={3} sm={12}>
+            <Grid item lg={3} md={4} xs={12}>
               <TextField
                 name="ginecoAntecedents.irs"
                 label="IRS"
@@ -95,7 +95,7 @@ const GinecoAntecedents = ({ expanded, handleChangeAccordion, register }) => {
               />
             </Grid>
 
-            <Grid item lg={3} md={3} sm={12}>
+            <Grid item lg={3} md={4} xs={12}>
               <TextField
                 name="ginecoAntecedents.gestas"
                 label="Gestas"
@@ -106,7 +106,7 @@ const GinecoAntecedents = ({ expanded, handleChangeAccordion, register }) => {
               />
             </Grid>
 
-            <Grid item lg={3} md={3} sm={12}>
+            <Grid item lg={3} md={6} xs={12}>
               <TextField
                 name="ginecoAntecedents.ultimoParto"
                 label="Ultimo parto"
@@ -117,7 +117,7 @@ const GinecoAntecedents = ({ expanded, handleChangeAccordion, register }) => {
               />
             </Grid>
 
-            <Grid item lg={3} md={3} sm={12}>
+            <Grid item lg={3} md={6} xs={12}>
               <TextField
                 name="ginecoAntecedents.ultimoPap"
                 label="Ultimo PAP"
@@ -128,7 +128,7 @@ const GinecoAntecedents = ({ expanded, handleChangeAccordion, register }) => {
               />
             </Grid>
 
-            <Grid item lg={12} md={12} sm={12}>
+            <Grid item lg={12} md={12} xs={12}>
               <TextField
                 name="ginecoAntecedents.estudiosComplementarios"
                 label="Otros estudios complementarios"
