@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { DataGrid } from "@material-ui/data-grid";
+import { DataGrid, GridToolbar } from "@material-ui/data-grid";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
 import Button from "@material-ui/core/Button";
 import ConfirmDialog from "../Helpers/ConfirmDialog";
-import SnackBar from '../Helpers/SnackBar'
-
+import SnackBar from "../Helpers/SnackBar";
 
 const Patients = () => {
   let history = useHistory();
@@ -40,6 +39,19 @@ const Patients = () => {
     filterPanelColumns: "Columnas",
     filterPanelInputLabel: "Valor",
     filterPanelInputPlaceholder: "Valor filtro",
+    // Filters toolbar button text
+    toolbarFilters: "Filtros",
+    toolbarFiltersLabel: "Mostrar filtros",
+    toolbarFiltersTooltipHide: "Ocultar filtros",
+    toolbarFiltersTooltipShow: "Mostrar filtros",
+    toolbarFiltersTooltipActive: (count) =>
+      count > 1 ? `${count} filtros activos` : `${count} filtro activo`,
+    // Density selector toolbar button text
+    toolbarDensity: "Densidad",
+    toolbarDensityLabel: "Densidad",
+    toolbarDensityCompact: "Compacta",
+    toolbarDensityStandard: "Standard",
+    toolbarDensityComfortable: "Comoda",
 
     // Filter operators text
     filterOperatorContains: "contiene",
@@ -61,6 +73,13 @@ const Patients = () => {
     columnMenuUnsort: "Desordenar",
     columnMenuSortAsc: "Ordenar ascendente",
     columnMenuSortDesc: "Ordenar descendente",
+
+    // Columns panel text
+    columnsPanelTextFieldLabel: "Columna de búsqueda",
+    columnsPanelTextFieldPlaceholder: "Título de columna",
+    columnsPanelDragIconLabel: "Reorder columna",
+    columnsPanelShowAllButton: "Mostrar todo",
+    columnsPanelHideAllButton: "Ocultar todo",
 
     // Column header text
     columnHeaderFiltersTooltipActive: (count) =>
@@ -154,6 +173,9 @@ const Patients = () => {
           },
         ]}
         pageSize={20}
+        components={{
+          Toolbar: GridToolbar,
+        }}
         getRowId={(row) => row._id}
         onRowClick={(row) => history.push(`/paciente/${row.id}`)}
       />

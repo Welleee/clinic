@@ -25,10 +25,11 @@ app.get('*', (req,res) =>{
 });
 
 // const CONNECTION_URL = "mongodb://localhost/clinic";
+const CONNECTION_URL = process.env.MONGODB_URL;
 const PORT = process.env.PORT || 5000;
 
 mongoose
-  .connect(process.env.MONGODB_URL, {
+  .connect(CONNECTION_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
