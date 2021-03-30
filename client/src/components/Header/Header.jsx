@@ -67,12 +67,12 @@ const Header = () => {
 
         <Typography variant="body1">
           <NavLink
-            to="/alta-paciente"
+            to="/nuevo-paciente"
             className={classes.navLink}
             activeClassName={classes.active}
           >
             {/* <Button className={classes.buttonMenu}>Agregar Paciente</Button> */}
-            Agregar Paciente
+            Nuevo Paciente
           </NavLink>
         </Typography>
       </Toolbar>
