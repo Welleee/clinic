@@ -7,7 +7,6 @@ a {
   font-weight: bold;
 }
 
-
 .MuiDataGrid-root,
 .MuiDataGrid-row,
 .MuiDataGrid-window {
@@ -18,4 +17,12 @@ a {
   box-shadow: 0 1px 20px 0px #e4e4e4;
 }
 
+@media (max-width: 440px) {
+  .MuiButton-label {
+    font-size: 9px;
+  }
 
+  .MuiDataGridFilterForm-root {
+    flex-wrap: wrap;
+  }
+}
