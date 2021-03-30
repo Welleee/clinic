@@ -24,8 +24,8 @@ app.get('*', (req,res) =>{
   res.sendFile(path.join(path.resolve()+'/client/build/index.html'));
 });
 
-const CONNECTION_URL = "mongodb://localhost/clinic";
-// const CONNECTION_URL = process.env.MONGODB_URL;
+// const CONNECTION_URL = "mongodb://localhost/clinic";
+const CONNECTION_URL = process.env.MONGODB_URL;
 const PORT = process.env.PORT || 5000;
 
 mongoose
